@@ -53,17 +53,35 @@ for WORK in WORK_LIST:
     <head>
     <title>{TITLE}</title>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/alpheios-components@latest/dist/style/style-components.min.css"/>
     <link href="https://fonts.googleapis.com/css?family=Noto+Serif:400,700&amp;subset=greek,greek-ext" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
     </head>
     <body>
-      <div class="container">
+      <div class="container alpheios-enabled" lang="grc"">
       <nav>&#x2191; <a href="./">Open Apostolic Fathers</a></nav>
       <h1 lang="en">{TITLE}</h1>
     """
 
     FOOTER = """\
       </div>
+        <script type="text/javascript">
+          document.addEventListener("DOMContentLoaded", function(event) {
+            import ("https://cdn.jsdelivr.net/npm/alpheios-embedded@latest/dist/alpheios-embedded.min.js").then(embedLib => {
+              window.AlpheiosEmbed.importDependencies({
+                mode: 'cdn'
+              }).then(Embedded => {
+                new Embedded({
+                  clientId: 'greek_leaners_text_project'
+                }).activate();
+              }).catch(e => {
+                console.error(`Import of Alpheios embedded library dependencies failed: ${e}`)
+              })
+            }).catch(e => {
+              console.error(`Import of Alpheios Embedded library failed: ${e}`)
+            })
+          });
+        </script>
     </body>
     </html>
     """

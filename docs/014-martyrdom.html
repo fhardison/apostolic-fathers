@@ -3,11 +3,12 @@
     <head>
     <title>The Martyrdom of Polycarp</title>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/alpheios-components@latest/dist/style/style-components.min.css"/>
     <link href="https://fonts.googleapis.com/css?family=Noto+Serif:400,700&amp;subset=greek,greek-ext" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
     </head>
     <body>
-      <div class="container">
+      <div class="container alpheios-enabled" lang="grc"">
       <nav>&#x2191; <a href="./">Open Apostolic Fathers</a></nav>
       <h1 lang="en">The Martyrdom of Polycarp</h1>
     
@@ -142,6 +143,23 @@
       <span class="verse_ref">5</span>&nbsp;Ἐκ τούτων οὖν, ὡς προλέλεκται, τῶν τοῦ Εἰρηναίου συγγραμμάτων Γάϊος μετεγράψατο, ἐκ δὲ τῶν Γαΐου ἀντιγράφων Ἰσοκράτης ἐν Κορίνθῳ. ἐγὼ δὲ πάλιν Πιόνιος ἐκ τῶν Ἰσοκράτους ἀντιγράφων ἔγραψα κατὰ ἀποκάλυψιν τοῦ ἁγίου Πολυκάρπου ζητήσας αὐτά, συναγαγὼν αὐτὰ ἤδη σχεδὸν ἐκ τοῦ χρόνου κεκμηκότα, ἵνα κἀμὲ συναγάγῃ ὁ κύριος Ἰησοῦς Χριστὸς μετὰ τῶν ἐκλεκτῶν αὐτοῦ εἰς τὴν ἐπουράνιον αὐτοῦ βασιλείαν· ᾧ ἡ δόξα σὺν τῷ πατρὶ καὶ τῷ υἱῷ καὶ τῷ ἁγίῳ πνεύματι εἰς τοὺς αἰῶνας τῶν αἰώνων. ἀμήν.
     </div>
       </div>
+        <script type="text/javascript">
+          document.addEventListener("DOMContentLoaded", function(event) {
+            import ("https://cdn.jsdelivr.net/npm/alpheios-embedded@latest/dist/alpheios-embedded.min.js").then(embedLib => {
+              window.AlpheiosEmbed.importDependencies({
+                mode: 'cdn'
+              }).then(Embedded => {
+                new Embedded({
+                  clientId: 'greek_leaners_text_project'
+                }).activate();
+              }).catch(e => {
+                console.error(`Import of Alpheios embedded library dependencies failed: ${e}`)
+              })
+            }).catch(e => {
+              console.error(`Import of Alpheios Embedded library failed: ${e}`)
+            })
+          });
+        </script>
     </body>
     </html>
     
