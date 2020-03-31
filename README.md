@@ -8,6 +8,8 @@ To produced these texts, the Perseus Digital Library and the Open Greek and Lati
 
 Formatted texts may be browsed at <https://jtauber.github.io/apostolic-fathers/>.
 
+Formatted texts with Alpheios integrated can be found at <https://fhardison.github.io/apostolic-fathers/>
+
 See [NOTES.md](https://github.com/jtauber/apostolic-fathers/blob/master/NOTES.md) for details of the process of correction.
 
 Also see the blog posts:
