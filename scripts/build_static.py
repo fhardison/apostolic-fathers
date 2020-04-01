@@ -53,6 +53,7 @@ for WORK in WORK_LIST:
     <head>
     <title>{TITLE}</title>
     <meta charset="utf-8">
+    <meta name="viewport"  content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/alpheios-components@latest/dist/style/style-components.min.css"/>
     <link href="https://fonts.googleapis.com/css?family=Noto+Serif:400,700&amp;subset=greek,greek-ext" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
